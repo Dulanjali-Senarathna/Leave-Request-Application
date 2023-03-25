@@ -2459,11 +2459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dulanjali\\source\\repos\\Leave Request Application\\Leave Request Application\\Leave Request Application.csproj",
+      "projectUniqueName": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
       "projectName": "Leave Request Application",
-      "projectPath": "C:\\Users\\Dulanjali\\source\\repos\\Leave Request Application\\Leave Request Application\\Leave Request Application.csproj",
+      "projectPath": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
       "packagesPath": "C:\\Users\\Dulanjali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dulanjali\\source\\repos\\Leave Request Application\\Leave Request Application\\obj\\",
+      "outputPath": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dulanjali\\AppData\\Roaming\\NuGet\\NuGet.Config",
