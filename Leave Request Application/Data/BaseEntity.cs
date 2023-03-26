@@ -1,6 +1,9 @@
 ﻿namespace Leave_Request_Application.Data
 {
-    public class BaseClass
+    public abstract class BaseEntity 
     {
+        public int Id { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime DateModified { get; set; }
     }
 }
