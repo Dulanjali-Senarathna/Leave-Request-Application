@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Leave_Request_Application.Data;
+using AutoMapper;
+using Leave_Request_Application.Models;
 
 namespace Leave_Request_Application.Controllers
 {
@@ -13,10 +15,12 @@ namespace Leave_Request_Application.Controllers
     {
         //Create db connection inside controller (dependency injection/inversion)
         private readonly ApplicationDbContext _context;
+        private readonly IMapper mapper;
 
-        public LeaveTypesController(ApplicationDbContext context)
+        public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            this.mapper = mapper;
         }
 
         // GET: LeaveTypes
@@ -24,7 +28,7 @@ namespace Leave_Request_Application.Controllers
         {
             if (_context.LeaveTypes != null)
             {
-               var LeaveTypes = await _context.LeaveTypes.ToListAsync();
+               var LeaveTypes = mapper.Map<List<LeaveTypeVM>>( await _context.LeaveTypes.ToListAsync());
                return View(LeaveTypes); //select * from LeaveTypes 
             }
             else
