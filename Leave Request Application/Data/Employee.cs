@@ -8,7 +8,7 @@ namespace Leave_Request_Application.Data
         public string? LastName { get; set; }
         public string? RegisterId { get; set; }
 
-        public string NIC { get; set; }
+        public string? NIC { get; set; }
 
     }
 }
