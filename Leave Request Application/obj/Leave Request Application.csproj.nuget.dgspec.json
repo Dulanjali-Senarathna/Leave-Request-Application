@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj": {}
+    "C:\\Users\\Dulanjali\\Desktop\\New folder\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj": {
+    "C:\\Users\\Dulanjali\\Desktop\\New folder\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
+        "projectUniqueName": "C:\\Users\\Dulanjali\\Desktop\\New folder\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
         "projectName": "Leave Request Application",
-        "projectPath": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
+        "projectPath": "C:\\Users\\Dulanjali\\Desktop\\New folder\\Leave-Request-Application\\Leave Request Application\\Leave Request Application.csproj",
         "packagesPath": "C:\\Users\\Dulanjali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dulanjali\\Desktop\\Leave-Request-Application\\Leave Request Application\\obj\\",
+        "outputPath": "C:\\Users\\Dulanjali\\Desktop\\New folder\\Leave-Request-Application\\Leave Request Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dulanjali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,6 +73,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.13, )"
+            },
+            "Microsoft.Web.LibraryManager.Build": {
+              "target": "Package",
+              "version": "[2.1.175, )"
+            },
+            "SweetAlert": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
