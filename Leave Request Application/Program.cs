@@ -1,7 +1,10 @@
 using Leave_Request_Application.Configurations;
+using Leave_Request_Application.Contracts;
 using Leave_Request_Application.Data;
+using Leave_Request_Application.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,12 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+//putting one single instance of this service in the entire application
+builder.Services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//register Interface classes
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 

@@ -8,18 +8,21 @@ using Microsoft.EntityFrameworkCore;
 using Leave_Request_Application.Data;
 using AutoMapper;
 using Leave_Request_Application.Models;
+using Leave_Request_Application.Contracts;
 
 namespace Leave_Request_Application.Controllers
 {
     public class LeaveTypesController : Controller
     {
         //Create db connection inside controller (dependency injection/inversion)
-        private readonly ApplicationDbContext _context;
+        
+        private readonly ILeaveTypeRepository leaveTypeRepository;
         private readonly IMapper mapper;
 
-        public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
+        public LeaveTypesController(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
         {
-            _context = context;
+            
+            this.leaveTypeRepository = leaveTypeRepository;
             this.mapper = mapper;
         }
 
