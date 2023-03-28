@@ -10,9 +10,12 @@ using AutoMapper;
 using Leave_Request_Application.Models;
 using Leave_Request_Application.Contracts;
 using Leave_Request_Application.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Leave_Request_Application.Controllers
 {
+    //add authorization to view and edit or delete leave types
+    [Authorize(Roles ="Administrator")]
     public class LeaveTypesController : Controller
     {
         //Create db connection inside controller (dependency injection/inversion)
