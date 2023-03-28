@@ -2,7 +2,9 @@ using Leave_Request_Application.Configurations;
 using Leave_Request_Application.Contracts;
 using Leave_Request_Application.Data;
 using Leave_Request_Application.Repositories;
+using Leave_Request_Application.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +22,10 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
 
 //putting one single instance of this service in the entire application
 builder.Services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+//create new instants of email service everytime
+builder.Services.AddTransient<IEmailSender>(s => new EmailSender("localhost", 25, "no-reply@leavemanagement.com"));
+
 //register Interface classes
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
