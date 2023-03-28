@@ -4,6 +4,7 @@ using Leave_Request_Application.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Leave_Request_Application.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230328133631_AddedDefaultUsersAndRoles")]
+    partial class AddedDefaultUsersAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,37 +105,33 @@ namespace Leave_Request_Application.Data.Migrations
                         {
                             Id = "fc0e7493-5se7-427f-8204-7b7w2424683a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "da5bee05-e873-4090-985c-09d12d5d7982",
+                            ConcurrencyStamp = "0a3337cf-dcf0-4a07-bdfe-fab55438c7fc",
                             Email = "admin@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "System",
                             LastName = "Admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
-                            NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPJFpgl6Y9mvYqFYzYvqgdkV45SphDROKn+xd9U5boG1lTNHsMqccSqvIWIp9jknXQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBlgO/LrF0ripb9+trJwdPTN3kJvXRx6OjeZoH/7NN44SQIPYOyCbKrwVC/Y6GAh3Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f67c271f-0107-4189-b12a-022d422147c4",
-                            TwoFactorEnabled = false,
-                            UserName = "admin@gmail.com"
+                            SecurityStamp = "93aac406-1e17-4a9d-b56e-677e5e7e4b3e",
+                            TwoFactorEnabled = false
                         },
                         new
                         {
                             Id = "2ab4a659-d9e0-41e0-bc26-172c545d981a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ce39d443-eb4e-4c4c-94cd-77b5dc9d6a94",
+                            ConcurrencyStamp = "67f50237-1e37-482d-9d1f-41e4eb4a05f1",
                             Email = "dulanjalisenarathna@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "Dulanjali",
                             LastName = "Senarathna",
                             LockoutEnabled = false,
                             NormalizedEmail = "DULANJALISENARATHNA@GMAIL.COM",
-                            NormalizedUserName = "DULANJALISENARATHNA@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEK7egh8622N/jWbCpGasz8iQwVwoUqU1XF4UTaYZutuOZ7y70OuS1z59jUX/z6A8aw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGh5WHkN7IEcJU1Jk/Ir20Vltv+GoW5+IccOfKXFfc9xMuc16gJDToWpl+tUhZSuzQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8a8e2879-25b0-4de9-a4e6-7aabccf1087c",
-                            TwoFactorEnabled = false,
-                            UserName = "dulanjalisenarathna@gmail.com"
+                            SecurityStamp = "76218d68-7978-4b40-9861-0c0c5cd5edca",
+                            TwoFactorEnabled = false
                         });
                 });
 
@@ -224,14 +222,14 @@ namespace Leave_Request_Application.Data.Migrations
                         new
                         {
                             Id = "fc0e6493-5ae7-427f-8204-7b7c2424683a",
-                            ConcurrencyStamp = "ca4bb400-eb79-4d9c-95dc-2207fbfe91ec",
+                            ConcurrencyStamp = "947b829e-5491-4475-bdd3-0f3149f28f1e",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "fc0e4483-5ac7-427f-8274-7b7c1424683a",
-                            ConcurrencyStamp = "1528a084-d41a-42c6-ba90-9b778ee31ac9",
+                            ConcurrencyStamp = "03935be7-16e2-4eab-9f2e-17c73b83b3a0",
                             Name = "User",
                             NormalizedName = "USER"
                         });
